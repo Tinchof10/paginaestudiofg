@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2C3639;
+    border: solid 1px rgba(109, 109, 109, 0.546);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.406);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Navegador */
+nav {
+    background-color: #2C3639;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a { 
+    color: white;
+    text-decoration: none;
+}
+
+/* Seccion 1 "Inicio" */
+.sectioninicio {
+    background-color: #3F4E4F;
+    display: flex;
+    flex-direction: row;
+    border:solid 1px black;
+    align-items: center;
+    height: 473px;
+}
+
+.sectioninicio h1 {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+
+/* Seccion 2 "Estudio" */
+.sectionEstudio {
+    border: solid 1px black;
+    color: black;
+    background-color: #8a8a8a;
+    background-image: linear-gradient(62deg, #8a8a8a 0%, #8a8570 50%, #ffffff 100%);
+}
+
+.imagenestudiouno {
+    width: 500px;
+    height: 500px;
+    border: solid 1px white;
+}
+
+.imagenestudiodos {
+    width: 500px;
+    height: 500px;
+    border: solid 1px white;
+}
+
+.sectionestudio h3 {
+    font-size: 125%;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: end;
+}
+
+.ari {
+    background-color: #3F4E4F
+}
+/* Seccion 3 "Areas" */
+.sectionareas {
+    border: solid 1px black;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8a8a8a;
+    background-image: linear-gradient(62deg, #8a8a8a 0%, #8a8570 50%, #ffffff 100%);
+
+}
+
+.sectionareas h3 {
+    font-size: 175%;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.derechouno {
+    margin: 10px;
+}
+
+.derechodos {
+    margin: 10px;
+}
+
+.derechotres {
+    margin: 10px;
+}
+
+.derechocuatro {
+    margin: 10px;
+}
+
+.derechocinco {
+    margin: 10px;
+}
+
+/* Seccion 4 "Profesionales" */
+.sectionprof {
+    background-color: #DCD7C9;
+    border: solid 1px black;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tituloprof {
+    font-size: 125%;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+}
+
+
+.profesionales {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Seccion 5 "Contacto" */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #3F4E4F;
+    width: 100%;
+}
+
+/* Media */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectioninicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionEstudio {
+        flex-direction: column;
+    }
+
+    .imagenestudiouno {
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+    }
+    
+    .imagenestudiodos {
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+    }
+    
+    a {
+        flex-direction: column;
+    }
+    
+    .sectionprof {
+        flex-direction: column;
+    }
+
+    .tituloprof {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    /*Estilos Generales*/
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectioninicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionEstudio {
+        flex-direction: column;
+    }
+
+    .imagenestudiouno {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .imagenestudiodos {
+        width: 300px;
+        height: 300px;
+    }
+    
+    a {
+        flex-direction: column;
+    }
+    
+    .sectionprof {
+        flex-direction: column;
+    }
+
+    .tituloprof {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+.container_padre {
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-areas: 
+    "cabeza cabeza cabeza cabeza"
+    "ini ini ini ini"
+    "estu estu estu estu"
+    "pie pie pie arriba";
+}
+
+header {
+    grid-area: cabeza;
+}
+
+.sectioninicio {
+    grid-area: ini;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1);
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas: 
+    "ln fn fn";
+}
+
+.sectionEstudio {
+    grid-area: estu;
+    display: grid;
+    grid-template-columns: repeat(1fr,4);
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas: 
+    "tit tit tit tit"
+    "muno muno mdos mdos"
+    "paraf paraf paraf paraf";
+}
+
+footer {
+    grid-area: pie;
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 1);
+    grid-template-areas: 
+    "pafo mapa";
+    justify-content: flex-start;
+}
+
+.fotoini{
+    grid-area: fn;
+}
+.letra{
+    grid-area: ln;
+}
+
+.hestu{
+    grid-area: tit;
+}
+.imagenestudiouno {
+    grid-area: muno;
+}
+.imagenestudiodos{
+    grid-area: mdos;
+}
+.pestu{
+    grid-area: paraf;
+}
+
+.pfoo{
+    grid-area: pafo;
+}
+.ifrafo{
+    grid-area: mapa;
+}
+
+.ari{
+    grid-area: arriba;
+}
